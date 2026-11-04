@@ -72,8 +72,11 @@ avec le même contenu : {"application":"INSA VCC","status":"running"}.
 
 ### 1. Quelles différences existe-il entre une image officielle et un snapshot?
 
+Une image officielle fournit un système de départ standard, comme l’image Ubuntu 24.04 qu’on a utilisée pour créer notre première VM. Un snapshot est une copie du disque d’une VM à un moment précis. Il conserve les fichiers, les logiciels installés et leur configuration. Dans notre TP, on a ainsi retrouvé `app.py`, `requirements.txt` et Flask 3.1.3 sur `vm-snapshot`, sans avoir à les réinstaller.
 
 ### 2. Quels avantages apporte le redimensionnement d’une machine virtuelle dans un environnement Cloud?
+
+Le redimensionnement permet d’adapter les ressources d’une VM à ses besoins tout en gardant le système et les applications déjà installés. Dans notre TP, on est passés de 1 à 2 vCPU, tandis que la RAM visible dans Ubuntu est restée à 961 MiB. La VM dispose donc d’un processeur virtuel supplémentaire pour exécuter des tâches en parallèle.
 
 
 ### 3. Dans quels contextes un administrateur système préférera-t-il créer une nouvelle machine à partir d’un snapshot plutôt que de repartir d’une image vierge?
