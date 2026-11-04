@@ -81,3 +81,5 @@ Le redimensionnement permet d’adapter les ressources d’une VM à ses besoins
 
 ### 3. Dans quels contextes un administrateur système préférera-t-il créer une nouvelle machine à partir d’un snapshot plutôt que de repartir d’une image vierge?
 
+Un administrateur peut utiliser un snapshot pour tester une mise à jour sur une copie de la VM pendant que la machine d’origine reste disponible. C’est aussi pratique pour préparer plusieurs machines de TP identiques. Il suffit de configurer l’environnement une fois, puis de créer les autres VM à partir du snapshot pour retrouver les mêmes fichiers et les mêmes versions des logiciels.
+
