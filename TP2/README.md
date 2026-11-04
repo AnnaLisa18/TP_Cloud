@@ -45,3 +45,24 @@ l’utilisateur grâce à sa clé.
 Chaque VM peut communiquer sur son réseau privé. On réserve les adresses
 publiques aux VM qui ont besoin d’un accès extérieur. Une IP flottante
 peut ensuite être réattribuée à une autre VM sans modifier son adresse privée.
+
+## Étape 3 — Publier une application sur Internet
+
+### 1. Pourquoi les groupes de sécurité sont-ils indispensables ?
+
+L’IP flottante rend la VM joignable depuis le réseau externe. Le groupe de
+sécurité contrôle les connexions entrantes autorisées. Dans notre cas, la
+règle SSH sur le port 22 permet d’administrer la VM, tandis que la règle
+TCP sur le port 5000 permet d’accéder à l’application hello-api.
+
+### 2. Quel chemin parcourt la requête HTTP ?
+
+Depuis notre PC Windows, nous envoyons une requête HTTP à l’IP flottante
+194.199.106.226 sur le port 5000. Le routeur OpenStack traduit l’adresse
+de destination en 192.168.10.155, l’IP privée de la VM sur net-discovery.
+Le groupe TP2_security_group autorise le trafic TCP sur le port 5000.
+Flask reçoit la requête et renvoie sa réponse au PC.
+
+Nous avons testé l’application depuis la VM sur localhost:5000, puis depuis
+Windows sur 194.199.106.226:5000. Les deux tests ont renvoyé HTTP 200 OK
+avec le même contenu : {"application":"INSA VCC","status":"running"}.
