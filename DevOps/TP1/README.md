@@ -1,8 +1,8 @@
-# TP DevOps 1 — Déployer une application sur Kubernetes
+# TP DevOps 1 - Déployer une application sur Kubernetes
 
 L’objectif du TP est de déployer l’application Calculator sur un cluster Kubernetes hébergé sur OpenStack. L’application comprend un frontend qui reçoit les calculs et quatre microservices qui réalisent les opérations.
 
-## Étape 1 — Mettre en place l’infrastructure Cloud (§ 1.8)
+## Étape 1 - Mettre en place l’infrastructure Cloud
 
 Dans le projet OpenStack `ens-insa-tp3-07`, nous avons créé le réseau privé `net-devops` (`192.168.20.0/24`) et l’avons relié à `routerdefault`. Conformément à la consigne donnée en séance, notre cluster utilise deux workers.
 
@@ -39,7 +39,7 @@ Après le rattachement des deux workers et l’installation de Calico, nous avon
 | `vm-1` | `Ready` | `<none>` | `v1.36.6` |
 | `vm-2` | `Ready` | `<none>` | `v1.36.6` |
 
-## Étape 2 — Déployer un premier microservice (§ 2.5)
+## Étape 2 - Déployer un premier microservice
 
 ### 1. Quel est le rôle d’un Deployment ? Pourquoi l’utiliser pour déployer un Pod ?
 
@@ -60,7 +60,7 @@ Le nouveau Pod est passé de `ContainerCreating` à `Running` en environ
 deux secondes. Il s’exécute sur le même worker (`vm-2`), avec une nouvelle
 adresse IP (`192.168.217.131`).
 
-## Étape 3 — Exposer le microservice (§ 3.4)
+## Étape 3 - Exposer le microservice
 
 ### 1. Pourquoi utiliser un Service pour donner accès au Pod de calculator-calc ?
 
@@ -82,7 +82,7 @@ Le Service `calculator-calc` a reçu le NodePort `32172`. Depuis
 `vm-k8s`, les tests sur l’IP flottante du master puis sur son IP privée
 ont tous deux expiré après 5 secondes. Aucune réponse HTTP n’a été reçue.
 
-## Étape 4 — Déployer l’application Calculator (§ 4.4)
+## Étape 4 - Déployer l’application Calculator
 
 ### 1. Pourquoi utiliser un NodePort pour le frontend et des ClusterIP pour les quatre backends ?
 
@@ -96,4 +96,4 @@ Le frontend utilise le nom DNS du Service et son port. Par exemple, pour une add
 
 Après le remplacement d’un Pod backend, son adresse IP peut changer. Si l’ancienne adresse est inscrite dans la configuration du frontend, les calculs destinés à ce backend risquent d’échouer. Avec le nom du Service, le frontend conserve la même destination même lorsque Kubernetes remplace un Pod ou ajoute une réplique.
 
-*À compléter après le § 4.3 — Calcul envoyé à Calculator, réponse exacte reçue et comparaison avec le résultat attendu.*
+*À compléter après le § 4.3 - Calcul envoyé à Calculator, réponse exacte reçue et comparaison avec le résultat attendu.*
