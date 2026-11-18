@@ -1,102 +1,80 @@
-<mxfile host="app.diagrams.net">
-  <diagram id="tp3-archi" name="Architecture TP3">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="900" math="0" shadow="0">
+<mxfile host="Electron">
+  <diagram id="Qj3RQGfoCPBZJlE3tgmL" name="Architecture TP3">
+    <mxGraphModel grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="0" pageScale="1" pageWidth="1180" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-
-        <!-- Internet -->
-        <mxCell id="pc" value="&lt;b&gt;PC utilisateur&lt;/b&gt;&lt;br&gt;(Internet)" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="20" y="300" width="150" height="100" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-1" parent="1" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;" value="&lt;b&gt;PC utilisateur&lt;/b&gt;&lt;br&gt;(Internet)" vertex="1">
+          <mxGeometry height="100" width="150" x="20" y="300" as="geometry" />
         </mxCell>
-
-        <!-- Projet OpenStack -->
-        <mxCell id="os" value="&lt;b&gt;Projet OpenStack&lt;/b&gt;" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;strokeWidth=2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="200" y="20" width="960" height="680" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-2" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;strokeWidth=2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;" value="&lt;b&gt;Projet OpenStack&lt;/b&gt;" vertex="1">
+          <mxGeometry height="680" width="960" x="200" y="20" as="geometry" />
         </mxCell>
-
-        <mxCell id="ext" value="&lt;b&gt;vpn-external&lt;/b&gt;&lt;br&gt;réseau public" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="230" y="320" width="120" height="60" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="&lt;b&gt;vpn-external&lt;/b&gt;&lt;br&gt;réseau public" vertex="1">
+          <mxGeometry height="60" width="120" x="230" y="320" as="geometry" />
         </mxCell>
-
-        <mxCell id="router" value="&lt;b&gt;routerdefault&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="390" y="315" width="120" height="70" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="&lt;b&gt;routerdefault&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="390" y="315" as="geometry" />
         </mxCell>
-
-        <!-- Réseau privé -->
-        <mxCell id="net" value="&lt;b&gt;net-discovery&lt;/b&gt; — 192.168.10.0/24 (passerelle 192.168.10.1)" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=#dae8fc;fillOpacity=40;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;align=center;spacingTop=4;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="550" y="50" width="590" height="630" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-5" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=#dae8fc;fillOpacity=40;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;align=center;spacingTop=4;fontSize=13;" value="&lt;b&gt;net-discovery&lt;/b&gt; — 192.168.10.0/24 (passerelle 192.168.10.1)" vertex="1">
+          <mxGeometry height="630" width="590" x="550" y="50" as="geometry" />
         </mxCell>
-
-        <!-- vm-calc -->
-        <mxCell id="vmcalc" value="&lt;b&gt;vm-calc&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée + IP flottante&lt;br&gt;rebond SSH (ProxyJump)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;spacingTop=6;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="580" y="280" width="200" height="140" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;spacingTop=6;fontSize=12;" value="&lt;b&gt;vm-calc&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée + IP flottante&lt;br&gt;rebond SSH (ProxyJump)" vertex="1">
+          <mxGeometry height="140" width="200" x="580" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="ccalc" value="🐳 &lt;b&gt;calc-service&lt;/b&gt;&lt;br&gt;frontend · TCP 80" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmcalc">
-          <mxGeometry x="20" y="70" width="160" height="50" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-7" parent="bNMOC-xYIqt7Gp-8Htyf-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" value="🐳 &lt;b&gt;calc-service&lt;/b&gt;&lt;br&gt;frontend · TCP 80" vertex="1">
+          <mxGeometry height="50" width="160" x="20" y="70" as="geometry" />
         </mxCell>
-
-        <!-- vm-sum -->
-        <mxCell id="vmsum" value="&lt;b&gt;vm-sum&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="900" y="90" width="210" height="115" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" value="&lt;b&gt;vm-sum&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" vertex="1">
+          <mxGeometry height="115" width="210" x="900" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="csum" value="🐳 &lt;b&gt;sum-service&lt;/b&gt;&lt;br&gt;addition · TCP 50001" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmsum">
-          <mxGeometry x="20" y="52" width="170" height="48" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-9" parent="bNMOC-xYIqt7Gp-8Htyf-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" value="🐳 &lt;b&gt;sum-service&lt;/b&gt;&lt;br&gt;addition · TCP 50001" vertex="1">
+          <mxGeometry height="48" width="170" x="20" y="52" as="geometry" />
         </mxCell>
-
-        <!-- vm-sub -->
-        <mxCell id="vmsub" value="&lt;b&gt;vm-sub&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="900" y="235" width="210" height="115" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" value="&lt;b&gt;vm-sub&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" vertex="1">
+          <mxGeometry height="115" width="210" x="900" y="235" as="geometry" />
         </mxCell>
-        <mxCell id="csub" value="🐳 &lt;b&gt;sub-service&lt;/b&gt;&lt;br&gt;soustraction · TCP 50002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmsub">
-          <mxGeometry x="20" y="52" width="170" height="48" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-11" parent="bNMOC-xYIqt7Gp-8Htyf-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" value="🐳 &lt;b&gt;sub-service&lt;/b&gt;&lt;br&gt;soustraction · TCP 50002" vertex="1">
+          <mxGeometry height="48" width="170" x="20" y="52" as="geometry" />
         </mxCell>
-
-        <!-- vm-mul -->
-        <mxCell id="vmmul" value="&lt;b&gt;vm-mul&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="900" y="380" width="210" height="115" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" value="&lt;b&gt;vm-mul&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" vertex="1">
+          <mxGeometry height="115" width="210" x="900" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="cmul" value="🐳 &lt;b&gt;mul-service&lt;/b&gt;&lt;br&gt;multiplication · TCP 50003" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmmul">
-          <mxGeometry x="20" y="52" width="170" height="48" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-13" parent="bNMOC-xYIqt7Gp-8Htyf-12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" value="🐳 &lt;b&gt;mul-service&lt;/b&gt;&lt;br&gt;multiplication · TCP 50003" vertex="1">
+          <mxGeometry height="48" width="170" x="20" y="52" as="geometry" />
         </mxCell>
-
-        <!-- vm-div -->
-        <mxCell id="vmdiv" value="&lt;b&gt;vm-div&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="900" y="525" width="210" height="115" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" value="&lt;b&gt;vm-div&lt;/b&gt; · insa-tiny&lt;br&gt;IP privée seulement" vertex="1">
+          <mxGeometry height="115" width="210" x="900" y="525" as="geometry" />
         </mxCell>
-        <mxCell id="cdiv" value="🐳 &lt;b&gt;div-service&lt;/b&gt;&lt;br&gt;division · TCP 50004" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmdiv">
-          <mxGeometry x="20" y="52" width="170" height="48" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-15" parent="bNMOC-xYIqt7Gp-8Htyf-14" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" value="🐳 &lt;b&gt;div-service&lt;/b&gt;&lt;br&gt;division · TCP 50004" vertex="1">
+          <mxGeometry height="48" width="170" x="20" y="52" as="geometry" />
         </mxCell>
-
-        <!-- Flux -->
-        <mxCell id="e1" value="HTTP POST :80&lt;br&gt;SSH :22" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pc" target="ext">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-16" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;" target="bNMOC-xYIqt7Gp-8Htyf-3" value="HTTP POST :80&lt;br&gt;SSH :22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="" style="html=1;endArrow=none;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="ext" target="router">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-17" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-3" style="html=1;endArrow=none;strokeWidth=2;strokeColor=#333333;" target="bNMOC-xYIqt7Gp-8Htyf-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="IP flottante&lt;br&gt;→ IP privée" style="html=1;endArrow=block;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="router" target="vmcalc">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-18" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-4" style="html=1;endArrow=block;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;" target="bNMOC-xYIqt7Gp-8Htyf-6" value="IP flottante&lt;br&gt;→ IP privée">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="HTTP :50001" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.15;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmcalc" target="vmsum">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-19" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-6" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.15;exitDx=0;exitDy=0;" target="bNMOC-xYIqt7Gp-8Htyf-8" value="HTTP :50001">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="HTTP :50002" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.38;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmcalc" target="vmsub">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-20" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-6" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.38;exitDx=0;exitDy=0;" target="bNMOC-xYIqt7Gp-8Htyf-10" value="HTTP :50002">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e6" value="HTTP :50003" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.62;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmcalc" target="vmmul">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-21" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-6" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.62;exitDx=0;exitDy=0;" target="bNMOC-xYIqt7Gp-8Htyf-12" value="HTTP :50003">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7" value="HTTP :50004" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.85;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmcalc" target="vmdiv">
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-22" edge="1" parent="1" source="bNMOC-xYIqt7Gp-8Htyf-6" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.85;exitDx=0;exitDy=0;" target="bNMOC-xYIqt7Gp-8Htyf-14" value="HTTP :50004">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Légende / groupe de sécurité -->
-        <mxCell id="sg" value="&lt;b&gt;Groupe de sécurité (commun aux 5 VM)&lt;/b&gt;&lt;br&gt;• TCP 22 et TCP 80 : depuis 0.0.0.0/0&lt;br&gt;• TCP 50001–50004 et ICMP : depuis le groupe de sécurité tp3-sg&lt;br&gt;&lt;br&gt;Seule vm-calc a une IP flottante : les 4 autres VM ne sont pas joignables depuis Internet.&lt;br&gt;L'accès SSH aux VM privées passe par vm-calc (ProxyJump)." style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="20" y="720" width="620" height="130" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-23" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="&lt;b&gt;Groupe de sécurité (commun aux 5 VM)&lt;/b&gt;&lt;br&gt;• TCP 22 et TCP 80 : depuis 0.0.0.0/0&lt;br&gt;• TCP 50001–50004 et ICMP : depuis le groupe de sécurité tp3-sg&lt;br&gt;&lt;br&gt;Seule vm-calc a une IP flottante : les 4 autres VM ne sont pas joignables depuis Internet.&lt;br&gt;L&#39;accès SSH aux VM privées passe par vm-calc (ProxyJump)." vertex="1">
+          <mxGeometry height="130" width="620" x="20" y="720" as="geometry" />
         </mxCell>
-        <mxCell id="res" value="&lt;b&gt;Ressources utilisées&lt;/b&gt;&lt;br&gt;5 VM / 6 · 5 vCPU / 6 · ≈ 5 Go RAM / 6&lt;br&gt;Image ubuntu-24.04 · 1 réseau privé · routeur routerdefault&lt;br&gt;🐳 = conteneur Docker (1 par VM)" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="660" y="720" width="500" height="130" as="geometry" />
+        <mxCell id="bNMOC-xYIqt7Gp-8Htyf-24" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" value="&lt;b&gt;Ressources utilisées&lt;/b&gt;&lt;br&gt;5 VM / 6 · 5 vCPU / 6 · ≈ 5 Go RAM / 6&lt;br&gt;Image ubuntu-24.04 · 1 réseau privé · routeur routerdefault&lt;br&gt;🐳 = conteneur Docker (1 par VM)" vertex="1">
+          <mxGeometry height="130" width="500" x="660" y="720" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
