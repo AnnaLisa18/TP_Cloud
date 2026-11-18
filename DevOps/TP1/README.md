@@ -53,7 +53,12 @@ L’image Docker contient le code du microservice et ses dépendances. Le Pod es
 
 Le contrôleur du Deployment gère les ReplicaSets. Le contrôleur du ReplicaSet compare le nombre de Pods présents au nombre demandé. Si le seul Pod de `calculator-calc` est supprimé, le ReplicaSet détecte qu’il manque une réplique et crée un nouveau Pod à partir du même modèle. L’application retrouve ainsi une réplique avec un nouveau nom de Pod.
 
-*À compléter après le § 2.4 — Nom du Pod supprimé, nom de son remplaçant et état observé avec `kubectl get pods`.*
+Après la suppression du Pod `calculator-calc-547949dc54-b7gvx`
+(`192.168.217.130`), le ReplicaSet a créé automatiquement le Pod
+`calculator-calc-547949dc54-g2vh6` pour maintenir la réplique demandée.
+Le nouveau Pod est passé de `ContainerCreating` à `Running` en environ
+deux secondes. Il s’exécute sur le même worker (`vm-2`), avec une nouvelle
+adresse IP (`192.168.217.131`).
 
 ## Étape 3 — Exposer le microservice (§ 3.4)
 
