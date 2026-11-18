@@ -78,7 +78,9 @@ Le Service utilise un sélecteur qui correspond au label du Pod, ici `app: calcu
 | `targetPort` | Port sur lequel le conteneur écoute dans le Pod. Il vaut également `80`. |
 | `nodePort` | Port ouvert sur les nœuds pour accéder au Service. Le test du TP utilise l’IP flottante de VM-K8s et ce port. |
 
-*À compléter après le § 3.3 — NodePort attribué et réponse HTTP obtenue depuis une VM du cluster.*
+Le Service `calculator-calc` a reçu le NodePort `32172`. Depuis
+`vm-k8s`, les tests sur l’IP flottante du master puis sur son IP privée
+ont tous deux expiré après 5 secondes. Aucune réponse HTTP n’a été reçue.
 
 ## Étape 4 — Déployer l’application Calculator (§ 4.4)
 
