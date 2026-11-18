@@ -96,4 +96,8 @@ Le frontend utilise le nom DNS du Service et son port. Par exemple, pour une add
 
 Après le remplacement d’un Pod backend, son adresse IP peut changer. Si l’ancienne adresse est inscrite dans la configuration du frontend, les calculs destinés à ce backend risquent d’échouer. Avec le nom du Service, le frontend conserve la même destination même lorsque Kubernetes remplace un Pod ou ajoute une réplique.
 
-*À compléter après le § 4.3 - Calcul envoyé à Calculator, réponse exacte reçue et comparaison avec le résultat attendu.*
+**Résultat attendu** Pour une requête contenant `2+3`, le frontend
+transmet les deux opérandes au Service `calculator-sum` sur le port `50001`.
+Le backend calcule la somme et renvoie `5` au frontend, qui transmet le
+résultat au client. Ce test permet de vérifier toute la chaîne, de la
+réception du calcul jusqu’au retour du résultat.
