@@ -11,13 +11,13 @@
 
 ## Étape 2
 
-## 1. Quel est le rôle d’un Deployment dans Kubernetes ? Pourquoi ne déploie-t-on pas directement un Pod ?
+### 1. Quel est le rôle d’un Deployment dans Kubernetes ? Pourquoi ne déploie-t-on pas directement un Pod ?
 
 
-## 2. Quelle est la différence entre une image Docker, un Pod et un Deployment ? Comment les 3 sont-ils liés ?
+### 2. Quelle est la différence entre une image Docker, un Pod et un Deployment ? Comment les 3 sont-ils liés ?
 
 
-## 3. Expliquez le principe de réconciliation. Quelle composante Kubernetes est responsable de ce comportement ?
+### 3. Expliquez le principe de réconciliation. Quelle composante Kubernetes est responsable de ce comportement ?
 
 
 ## Étape 3
