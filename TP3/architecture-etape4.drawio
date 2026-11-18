@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="tp3-etape4" name="Topologie étape 4">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1290" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="pc" value="&lt;b&gt;PC utilisateur&lt;/b&gt;&lt;br&gt;(Internet)" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="70" width="150" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="os" value="&lt;b&gt;Projet OpenStack&lt;/b&gt;" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;strokeWidth=2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="1070" height="760" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ext" value="&lt;b&gt;vpn-external&lt;/b&gt;&lt;br&gt;réseau public" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="230" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="router" value="&lt;b&gt;routerdefault&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="420" y="85" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- net-front -->
+        <mxCell id="netfront" value="&lt;b&gt;net-front&lt;/b&gt; — 192.168.20.0/24&lt;br&gt;(passerelle 192.168.20.1)" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fillOpacity=40;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;align=center;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="390" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="vmfront" value="&lt;b&gt;vm-front&lt;/b&gt; · insa-tiny&lt;br&gt;192.168.20.110 + IP flottante&lt;br&gt;rebond SSH (ProxyJump)&lt;br&gt;route 192.168.10.0/24 via 192.168.20.1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;spacingTop=6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="275" y="370" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cfront" value="🐳 &lt;b&gt;calc-service&lt;/b&gt;&lt;br&gt;frontend · TCP 80" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmfront">
+          <mxGeometry x="70" y="95" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- net-discovery -->
+        <mxCell id="net" value="&lt;b&gt;net-discovery&lt;/b&gt; — 192.168.10.0/24 (passerelle 192.168.10.1)" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=#dae8fc;fillOpacity=40;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;align=center;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="690" y="50" width="560" height="710" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmsum" value="&lt;b&gt;vm-sum&lt;/b&gt; · 192.168.10.6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="90" width="210" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="csum" value="🐳 &lt;b&gt;sum-service&lt;/b&gt;&lt;br&gt;TCP 50001" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmsum">
+          <mxGeometry x="20" y="40" width="170" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmsub" value="&lt;b&gt;vm-sub&lt;/b&gt; · 192.168.10.209" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="225" width="210" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="csub" value="🐳 &lt;b&gt;sub-service&lt;/b&gt;&lt;br&gt;TCP 50002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmsub">
+          <mxGeometry x="20" y="40" width="170" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmmul" value="&lt;b&gt;vm-mul&lt;/b&gt; · 192.168.10.188" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="360" width="210" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="cmul" value="🐳 &lt;b&gt;mul-service&lt;/b&gt;&lt;br&gt;TCP 50003" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmmul">
+          <mxGeometry x="20" y="40" width="170" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmdiv" value="&lt;b&gt;vm-div&lt;/b&gt; · 192.168.10.39" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="495" width="210" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="cdiv" value="🐳 &lt;b&gt;div-service&lt;/b&gt;&lt;br&gt;TCP 50004" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d63ed;fontColor=#ffffff;strokeColor=#0b3d91;fontSize=12;" vertex="1" parent="vmdiv">
+          <mxGeometry x="20" y="40" width="170" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmcalc" value="&lt;b&gt;vm-calc&lt;/b&gt; · 192.168.10.184&lt;br&gt;&lt;i&gt;plus de conteneur&lt;br&gt;(ancien frontend)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;fontColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="640" width="210" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Liens routeur -->
+        <mxCell id="e1" value="HTTP POST :80&lt;br&gt;SSH :22" style="html=1;endArrow=block;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pc" target="ext">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="html=1;endArrow=none;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="ext" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="interface 192.168.20.1&lt;br&gt;IP flottante → 192.168.20.110" style="html=1;endArrow=block;strokeWidth=2;strokeColor=#82b366;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="router" target="netfront">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="interface 192.168.10.1" style="html=1;endArrow=none;strokeWidth=2;strokeColor=#6c8ebf;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="router" target="net">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Flux applicatifs (routés par routerdefault) -->
+        <mxCell id="f1" value="HTTP :50001" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.2;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmfront" target="vmsum">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="HTTP :50002" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmfront" target="vmsub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="HTTP :50003" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.6;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmfront" target="vmmul">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="HTTP :50004" style="html=1;endArrow=block;strokeWidth=1.5;strokeColor=#1d63ed;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8;exitDx=0;exitDy=0;" edge="1" parent="1" source="vmfront" target="vmdiv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="&lt;b&gt;Flux entre net-front et net-discovery&lt;/b&gt;&lt;br&gt;Les flèches bleues traversent routerdefault (192.168.20.1 → 192.168.10.1) : TTL 63 au lieu de 64.&lt;br&gt;Groupe de sécurité tp3-sg commun aux 6 VM : 22 et 80 depuis 0.0.0.0/0 ; 50001–50004 et ICMP depuis tp3-sg.&lt;br&gt;Seule vm-front a une IP flottante (194.199.106.226)." style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="800" width="1250" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
